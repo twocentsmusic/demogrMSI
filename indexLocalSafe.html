@@ -1,0 +1,660 @@
+<!-- HTML -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Demographics and Gold-MSI</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+        p {
+            font-size: 24px;
+        }
+        input[type="submit"] {
+            font-size: 16px;
+            padding: 5px 16px;
+        }
+        label {
+            font-size: 24px;
+        }
+        input[type="text"], input[type="number"] {
+            font-size: 16px;
+            padding: 5px;
+        }
+        #form1, #intro {
+            margin-top: 200px;
+            width: 100%;
+            text-align: center;
+        }
+        #form2 {
+            margin-top: 20px;
+            margin-left: 1in;
+            width: 100%;
+            text-align: left;
+        }
+        #form2, #form3 select{
+            font-size: 16px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1">
+        <label for="participantId">Participant ID:</label>
+        <input type="text" id="participantId" name="participantId" required><br><br>
+        <input type="submit" value="Next">
+    </form>
+
+    <form id="intro" class="hidden">
+        <p id="intro-text">Thank you for completing the experiment.<br>
+            Now we would like to ask you a few questions about yourself and<br>
+            your musical background and experience.</p>
+        <input type="submit" value="Next">
+    </form>
+
+    <form id="form2" class="hidden">
+        <p>1.
+        <label for="sex">Sex:</label>
+        <select id="sex" name="sex" required>
+            <option value="">Select...</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="others">Others</option>
+            <option value="preferNotToAnswer">Prefer not to answer</option>
+        </select></p>
+        <p>2.
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age" required></p>
+        <p>3.
+        <label for="yrsCA">How many years have you lived in Canada?</label>
+        <select id="yrsCA" name="yrsCA" required>
+            <option value="">Select...</option>
+            <option value="Less1">Less than 1 year</option>
+            <option value="1-2">1-2 years</option>
+            <option value="2-5">2-5 years</option>
+            <option value="5-10">5-10 years</option>
+            <option value="More10">More than 10 years</option>
+            <option value="WholeLife">My whole life</option>
+        </select></p>
+        <p>4.
+        <label for="nativlang">What is your native language?<br>(Check all that apply)</label><br>
+        <input type="checkbox" id="English" name="nativlang" value="English">
+        <label for="English">English</label><br>
+        <input type="checkbox" id="French" name="nativlang" value="French">
+        <label for="French">French</label><br>
+        <input type="checkbox" id="other" name="nativlang" value="other">
+        <label for="other">Other</label>
+        <input type="text" id="otherText" name="nativlangText"></p>
+        <p>5.
+        <label for="otherLang">What other languages do you speak?</label><br>
+        <input type="text" id="otherLang1" name="otherLang1">
+        <label for="prof1">Proficiency:</label>
+        <select id="prof1" name="proficiency">
+            <option value="">Select...</option>
+            <option value="fluent">Fluent</option>
+            <option value="limited">Limited working proficiency</option>
+            <option value="elementary">Elementary proficiency</option>
+        </select><br>
+        <input type="text" id="otherLang2" name="otherLang2">
+        <label for="prof2">Proficiency:</label>
+        <select id="prof2" name="proficiency">
+            <option value="">Select...</option>
+            <option value="fluent">Fluent</option>
+            <option value="limited">Limited working proficiency</option>
+            <option value="elementary">Elementary proficiency</option>
+        </select><br>
+        <input type="text" id="otherLang3" name="otherLang3">
+        <label for="prof3">Proficiency:</label>
+        <select id="prof3" name="proficiency">
+            <option value="">Select...</option>
+            <option value="fluent">Fluent</option>
+            <option value="limited">Limited working proficiency</option>
+            <option value="elementary">Elementary proficiency</option>
+        </select><br>
+        <input type="text" id="otherLang4" name="otherLang4">
+        <label for="prof4">Proficiency:</label>
+        <select id="prof4" name="proficiency">
+            <option value="">Select...</option>
+            <option value="fluent">Fluent</option>
+            <option value="limited">Limited working proficiency</option>
+            <option value="elementary">Elementary proficiency</option>
+        </select><br>
+        <input type="text" id="otherLang5" name="otherLang5">
+        <label for="prof5">Proficiency:</label>
+        <select id="prof5" name="proficiency">
+            <option value="">Select...</option>
+            <option value="fluent">Fluent</option>
+            <option value="limited">Limited working proficiency</option>
+            <option value="elementary">Elementary proficiency</option>
+        </select>
+        </p>
+        <input type="submit" value="Next">
+    </form>
+
+    <form id="form3" class="hidden">
+        <p>1.
+        <label for="Qn1">I spend a lot of my free time doing music-related activities.</label>
+        <select id="Qn1" name="Qn1" required>
+            <option value="">Select...</option>
+            <option value="1">Completely disagree</option>
+            <option value="2">Strongly disagree</option>
+            <option value="3">Disagree</option>
+            <option value="4">Neither agree nor disagree</option>
+            <option value="5">Agree</option>
+            <option value="6">Strongly agree</option>
+            <option value="7">Completely agree</option>
+        </select>
+        </p>
+        <p>2.
+            <label for="Qn2">I sometimes choose music that can trigger shivers down my spine.</label>
+            <select id="Qn2" name="Qn2" required>
+                <option value="">Select...</option>
+                <option value="1">Completely disagree</option>
+                <option value="2">Strongly disagree</option>
+                <option value="3">Disagree</option>
+                <option value="4">Neither agree nor disagree</option>
+                <option value="5">Agree</option>
+                <option value="6">Strongly agree</option>
+                <option value="7">Completely agree</option>
+            </select>
+            </p>
+        <p>3.
+            <label for="Qn3">I enjoy writing about music, for example on blogs and forums.</label>
+            <select id="Qn3" name="Qn3" required>
+                <option value="">Select...</option>
+                <option value="1">Completely disagree</option>
+                <option value="2">Strongly disagree</option>
+                <option value="3">Disagree</option>
+                <option value="4">Neither agree nor disagree</option>
+                <option value="5">Agree</option>
+                <option value="6">Strongly agree</option>
+                <option value="7">Completely agree</option>
+            </select>
+            </p>
+        <p>4.
+            <label for="Qn4">If somebody starts singing a song I don't know, I can usually join in.</label>
+            <select id="Qn4" name="Qn4" required>
+                <option value="">Select...</option>
+                <option value="1">Completely disagree</option>
+                <option value="2">Strongly disagree</option>
+                <option value="3">Disagree</option>
+                <option value="4">Neither agree nor disagree</option>
+                <option value="5">Agree</option>
+                <option value="6">Strongly agree</option>
+                <option value="7">Completely agree</option>
+            </select>
+            </p>
+        <p>5.
+            <label for="Qn5">I am able to judge whether someone is a good singer or not.</label>
+            <select id="Qn5" name="Qn5" required>
+                <option value="">Select...</option>
+                <option value="1">Completely disagree</option>
+                <option value="2">Strongly disagree</option>
+                <option value="3">Disagree</option>
+                <option value="4">Neither agree nor disagree</option>
+                <option value="5">Agree</option>
+                <option value="6">Strongly agree</option>
+                <option value="7">Completely agree</option>
+            </select>
+            </p>
+        <p>6.
+            <label for="Qn6">I usually know when I'm hearing a song for the first time.</label>
+            <select id="Qn6" name="Qn6" required>
+                <option value="">Select...</option>
+                <option value="1">Completely disagree</option>
+                <option value="2">Strongly disagree</option>
+                <option value="3">Disagree</option>
+                <option value="4">Neither agree nor disagree</option>
+                <option value="5">Agree</option>
+                <option value="6">Strongly agree</option>
+                <option value="7">Completely agree</option>
+            </select>
+            </p>
+        <p>7.
+            <label for="Qn7">I can sing or play music from memory.</label>
+            <select id="Qn7" name="Qn7" required>
+                <option value="">Select...</option>
+                <option value="1">Completely disagree</option>
+                <option value="2">Strongly disagree</option>
+                <option value="3">Disagree</option>
+                <option value="4">Neither agree nor disagree</option>
+                <option value="5">Agree</option>
+                <option value="6">Strongly agree</option>
+                <option value="7">Completely agree</option>
+            </select>
+            </p>
+        <p>8.
+            <label for="Qn8">I'm intrigued by musical styles I'm not familiar with and want to find out more.</label>
+            <select id="Qn8" name="Qn8" required>
+                <option value="">Select...</option>
+                <option value="1">Completely disagree</option>
+                <option value="2">Strongly disagree</option>
+                <option value="3">Disagree</option>
+                <option value="4">Neither agree nor disagree</option>
+                <option value="5">Agree</option>
+                <option value="6">Strongly agree</option>
+                <option value="7">Completely agree</option>
+            </select>
+            </p>
+        <p>9.
+            <label for="Qn9">Pieces of music rarely evoke emotions for me.</label>
+            <select id="Qn9" name="Qn9" required>
+                <option value="">Select...</option>
+                <option value="1">Completely disagree</option>
+                <option value="2">Strongly disagree</option>
+                <option value="3">Disagree</option>
+                <option value="4">Neither agree nor disagree</option>
+                <option value="5">Agree</option>
+                <option value="6">Strongly agree</option>
+                <option value="7">Completely agree</option>
+            </select>
+            </p>
+        <p>10.
+            <label for="Qn10">I am able to hit the right notes when I sing along with a recording.</label>
+            <select id="Qn10" name="Qn10" required>
+                <option value="">Select...</option>
+                <option value="1">Completely disagree</option>
+                <option value="2">Strongly disagree</option>
+                <option value="3">Disagree</option>
+                <option value="4">Neither agree nor disagree</option>
+                <option value="5">Agree</option>
+                <option value="6">Strongly agree</option>
+                <option value="7">Completely agree</option>
+            </select>
+            </p>
+        <p>11.
+            <label for="Qn11">I find it difficult to spot mistakes in a performance of a song even if I know the tune.</label>
+            <select id="Qn11" name="Qn11" required>
+                <option value="">Select...</option>
+                <option value="1">Completely disagree</option>
+                <option value="2">Strongly disagree</option>
+                <option value="3">Disagree</option>
+                <option value="4">Neither agree nor disagree</option>
+                <option value="5">Agree</option>
+                <option value="6">Strongly agree</option>
+                <option value="7">Completely agree</option>
+            </select>
+            </p>
+        <p>12.
+            <label for="Qn12">I can compare and discuss differences between two performances or versions of the same piece of music.</label>
+            <select id="Qn12" name="Qn12" required>
+                <option value="">Select...</option>
+                <option value="1">Completely disagree</option>
+                <option value="2">Strongly disagree</option>
+                <option value="3">Disagree</option>
+                <option value="4">Neither agree nor disagree</option>
+                <option value="5">Agree</option>
+                <option value="6">Strongly agree</option>
+                <option value="7">Completely agree</option>
+            </select>
+            </p>
+        <p>13.
+            <label for="Qn13">I have trouble recognizing a familiar song when played in a different way or by a different performer.</label>
+            <select id="Qn13" name="Qn13" required>
+                <option value="">Select...</option>
+                <option value="1">Completely disagree</option>
+                <option value="2">Strongly disagree</option>
+                <option value="3">Disagree</option>
+                <option value="4">Neither agree nor disagree</option>
+                <option value="5">Agree</option>
+                <option value="6">Strongly agree</option>
+                <option value="7">Completely agree</option>
+            </select>
+            </p>
+        <p>14.
+            <label for="Qn14">I have never been complimented for my talents as a musical performer.</label>
+            <select id="Qn14" name="Qn14" required>
+                <option value="">Select...</option>
+                <option value="1">Completely disagree</option>
+                <option value="2">Strongly disagree</option>
+                <option value="3">Disagree</option>
+                <option value="4">Neither agree nor disagree</option>
+                <option value="5">Agree</option>
+                <option value="6">Strongly agree</option>
+                <option value="7">Completely agree</option>
+            </select>
+            </p>
+        <p>15.
+            <label for="Qn15">I often read or search the internet for things related to music.</label>
+            <select id="Qn15" name="Qn15" required>
+                <option value="">Select...</option>
+                <option value="1">Completely disagree</option>
+                <option value="2">Strongly disagree</option>
+                <option value="3">Disagree</option>
+                <option value="4">Neither agree nor disagree</option>
+                <option value="5">Agree</option>
+                <option value="6">Strongly agree</option>
+                <option value="7">Completely agree</option>
+            </select>
+            </p>
+        <p>16.
+            <label for="Qn16">I often pick certain music to motivate or excite me.</label>
+            <select id="Qn16" name="Qn16" required>
+                <option value="">Select...</option>
+                <option value="1">Completely disagree</option>
+                <option value="2">Strongly disagree</option>
+                <option value="3">Disagree</option>
+                <option value="4">Neither agree nor disagree</option>
+                <option value="5">Agree</option>
+                <option value="6">Strongly agree</option>
+                <option value="7">Completely agree</option>
+            </select>
+            </p>
+        <p>17.
+            <label for="Qn17">I am not able to sing in harmony when somebody is singing a familiar tune.</label>
+            <select id="Qn17" name="Qn17" required>
+                <option value="">Select...</option>
+                <option value="1">Completely disagree</option>
+                <option value="2">Strongly disagree</option>
+                <option value="3">Disagree</option>
+                <option value="4">Neither agree nor disagree</option>
+                <option value="5">Agree</option>
+                <option value="6">Strongly agree</option>
+                <option value="7">Completely agree</option>
+            </select>
+            </p>
+        <p>18.
+            <label for="Qn18">I can tell when people sing or play out of time with the beat.</label>
+            <select id="Qn18" name="Qn18" required>
+                <option value="">Select...</option>
+                <option value="1">Completely disagree</option>
+                <option value="2">Strongly disagree</option>
+                <option value="3">Disagree</option>
+                <option value="4">Neither agree nor disagree</option>
+                <option value="5">Agree</option>
+                <option value="6">Strongly agree</option>
+                <option value="7">Completely agree</option>
+            </select>
+            </p>
+        <p>19.
+            <label for="Qn19">I am able to identify what is special about a given musical piece.</label>
+            <select id="Qn19" name="Qn19" required>
+                <option value="">Select...</option>
+                <option value="1">Completely disagree</option>
+                <option value="2">Strongly disagree</option>
+                <option value="3">Disagree</option>
+                <option value="4">Neither agree nor disagree</option>
+                <option value="5">Agree</option>
+                <option value="6">Strongly agree</option>
+                <option value="7">Completely agree</option>
+            </select>
+            </p>
+        <p>20.
+            <label for="Qn20">I am able to talk about the emotions that a piece of music evokes for me.</label>
+            <select id="Qn20" name="Qn20" required>
+                <option value="">Select...</option>
+                <option value="1">Completely disagree</option>
+                <option value="2">Strongly disagree</option>
+                <option value="3">Disagree</option>
+                <option value="4">Neither agree nor disagree</option>
+                <option value="5">Agree</option>
+                <option value="6">Strongly agree</option>
+                <option value="7">Completely agree</option>
+            </select>
+            </p>
+        <p>21.
+            <label for="Qn21">I don't spend much of my disposable income on music.</label>
+            <select id="Qn21" name="Qn21" required>
+                <option value="">Select...</option>
+                <option value="1">Completely disagree</option>
+                <option value="2">Strongly disagree</option>
+                <option value="3">Disagree</option>
+                <option value="4">Neither agree nor disagree</option>
+                <option value="5">Agree</option>
+                <option value="6">Strongly agree</option>
+                <option value="7">Completely agree</option>
+            </select>
+            </p>
+        <p>22.
+            <label for="Qn22">I can tell when people sing or play out of tune.</label>
+            <select id="Qn22" name="Qn22" required>
+                <option value="">Select...</option>
+                <option value="1">Completely disagree</option>
+                <option value="2">Strongly disagree</option>
+                <option value="3">Disagree</option>
+                <option value="4">Neither agree nor disagree</option>
+                <option value="5">Agree</option>
+                <option value="6">Strongly agree</option>
+                <option value="7">Completely agree</option>
+            </select>
+            </p>
+        <p>23.
+            <label for="Qn23">When I sing, I have no idea whether I'm in tune or not.</label>
+            <select id="Qn23" name="Qn23" required>
+                <option value="">Select...</option>
+                <option value="1">Completely disagree</option>
+                <option value="2">Strongly disagree</option>
+                <option value="3">Disagree</option>
+                <option value="4">Neither agree nor disagree</option>
+                <option value="5">Agree</option>
+                <option value="6">Strongly agree</option>
+                <option value="7">Completely agree</option>
+            </select>
+            </p>
+        <p>24.
+            <label for="Qn24">Music is kind of an addiction for me - I couldn't live without it.</label>
+            <select id="Qn24" name="Qn24" required>
+                <option value="">Select...</option>
+                <option value="1">Completely disagree</option>
+                <option value="2">Strongly disagree</option>
+                <option value="3">Disagree</option>
+                <option value="4">Neither agree nor disagree</option>
+                <option value="5">Agree</option>
+                <option value="6">Strongly agree</option>
+                <option value="7">Completely agree</option>
+            </select>
+            </p>
+        <p>25.
+            <label for="Qn25">I don’t like singing in public because I’m afraid that I would sing wrong notes.</label>
+            <select id="Qn25" name="Qn25" required>
+                <option value="">Select...</option>
+                <option value="1">Completely disagree</option>
+                <option value="2">Strongly disagree</option>
+                <option value="3">Disagree</option>
+                <option value="4">Neither agree nor disagree</option>
+                <option value="5">Agree</option>
+                <option value="6">Strongly agree</option>
+                <option value="7">Completely agree</option>
+            </select>
+            </p>
+        <p>26.
+            <label for="Qn26">When I hear a music I can usually identify its genre.</label>
+            <select id="Qn26" name="Qn26" required>
+                <option value="">Select...</option>
+                <option value="1">Completely disagree</option>
+                <option value="2">Strongly disagree</option>
+                <option value="3">Disagree</option>
+                <option value="4">Neither agree nor disagree</option>
+                <option value="5">Agree</option>
+                <option value="6">Strongly agree</option>
+                <option value="7">Completely agree</option>
+            </select>
+            </p>
+        <p>27.
+            <label for="Qn27">I would not consider myself a musician.</label>
+            <select id="Qn27" name="Qn27" required>
+                <option value="">Select...</option>
+                <option value="1">Completely disagree</option>
+                <option value="2">Strongly disagree</option>
+                <option value="3">Disagree</option>
+                <option value="4">Neither agree nor disagree</option>
+                <option value="5">Agree</option>
+                <option value="6">Strongly agree</option>
+                <option value="7">Completely agree</option>
+            </select>
+            </p>
+        <p>28.
+            <label for="Qn28">I keep track of new of music that I come across (e.g. new artists or recordings).</label>
+            <select id="Qn28" name="Qn28" required>
+                <option value="">Select...</option>
+                <option value="1">Completely disagree</option>
+                <option value="2">Strongly disagree</option>
+                <option value="3">Disagree</option>
+                <option value="4">Neither agree nor disagree</option>
+                <option value="5">Agree</option>
+                <option value="6">Strongly agree</option>
+                <option value="7">Completely agree</option>
+            </select>
+            </p>
+        <p>29.
+            <label for="Qn29">After hearing a new song two or three times, I can usually sing it by myself.</label>
+            <select id="Qn29" name="Qn29" required>
+                <option value="">Select...</option>
+                <option value="1">Completely disagree</option>
+                <option value="2">Strongly disagree</option>
+                <option value="3">Disagree</option>
+                <option value="4">Neither agree nor disagree</option>
+                <option value="5">Agree</option>
+                <option value="6">Strongly agree</option>
+                <option value="7">Completely agree</option>
+            </select>
+            </p>
+        <p>30.
+            <label for="Qn30">I only need to hear a new tune once and I can sing it back hours later.</label>
+            <select id="Qn30" name="Qn30" required>
+                <option value="">Select...</option>
+                <option value="1">Completely disagree</option>
+                <option value="2">Strongly disagree</option>
+                <option value="3">Disagree</option>
+                <option value="4">Neither agree nor disagree</option>
+                <option value="5">Agree</option>
+                <option value="6">Strongly agree</option>
+                <option value="7">Completely agree</option>
+            </select>
+            </p>
+        <p>31.
+            <label for="Qn31">Music can evoke my memories of past people and places.</label>
+            <select id="Qn31" name="Qn31" required>
+                <option value="">Select...</option>
+                <option value="1">Completely disagree</option>
+                <option value="2">Strongly disagree</option>
+                <option value="3">Disagree</option>
+                <option value="4">Neither agree nor disagree</option>
+                <option value="5">Agree</option>
+                <option value="6">Strongly agree</option>
+                <option value="7">Completely agree</option>
+            </select>
+            </p>
+        <p>32.
+            <label for="Qn32">I engaged in regular, daily practice of a musical instrument (including voice) for the following number of years:</label>
+            <select id="Qn32" name="Qn32" required>
+                <option value="">Select...</option>
+                <option value="1">0</option>
+                <option value="2">1 year</option>
+                <option value="3">2 years</option>
+                <option value="4">3 years</option>
+                <option value="5">4-5 years</option>
+                <option value="6">6-9 years</option>
+                <option value="7">10 or more</option>
+            </select></p>
+        <p>33.
+            <label for="Qn33">At the peak of my interest, I practiced </label>
+            <select id="Qn33" name="Qn33" required>
+                <option value="">Select...</option>
+                <option value="1">0</option>
+                <option value="2">0.5</option>
+                <option value="3">1</option>
+                <option value="4">1.5</option>
+                <option value="5">2</option>
+                <option value="6">3-4</option>
+                <option value="7">5 or more</option>
+            </select><label for="Qn33"> hours per day on my primary instrument.</label></p>
+        <p>34.
+            <label for="Qn34">I have attended </label>
+            <select id="Qn34" name="Qn34" required>
+                <option value="">Select...</option>
+                <option value="1">0</option>
+                <option value="2">1</option>
+                <option value="3">2</option>
+                <option value="4">3</option>
+                <option value="5">4-6</option>
+                <option value="6">7-10</option>
+                <option value="7">11 or more</option>
+            </select><label for="Qn34"> live music events as an audience member in the past twelve months.</label></p>
+        <p>35.
+            <label for="Qn35">I have had formal training in music theory for </label>
+            <select id="Qn35" name="Qn35" required>
+                <option value="">Select...</option>
+                <option value="1">0</option>
+                <option value="2">0.5</option>
+                <option value="3">1</option>
+                <option value="4">2</option>
+                <option value="5">3</option>
+                <option value="6">4-6</option>
+                <option value="7">7 or more</option>
+            </select><label for="Qn35"> years</label></p>
+        <p>36.
+            <label for="Qn36">I have had </label>
+            <select id="Qn36" name="Qn36" required>
+                <option value="">Select...</option>
+                <option value="1">0</option>
+                <option value="2">0.5</option>
+                <option value="3">1</option>
+                <option value="4">2</option>
+                <option value="5">3-5</option>
+                <option value="6">6-9</option>
+                <option value="7">10 or more</option>
+            </select><label for="Qn36"> years of formal training on a musical instrument (including voice) during my lifetime.</label></p>
+        <p>37.
+            <label for="Qn37">I can play </label>
+            <select id="Qn37" name="Qn37" required>
+                <option value="">Select...</option>
+                <option value="1">0</option>
+                <option value="2">1</option>
+                <option value="3">2</option>
+                <option value="4">3</option>
+                <option value="5">4</option>
+                <option value="6">5</option>
+                <option value="7">6 or more</option>
+            </select><label for="Qn37"> musical instruments.</label></p>
+        <p>38.
+            <label for="Qn38">I listen attentively to music for </label>
+            <select id="Qn38" name="Qn38" required>
+                <option value="">Select...</option>
+                <option value="1">0-15 min</option>
+                <option value="2">15-30 min</option>
+                <option value="3">30-60 min</option>
+                <option value="4">60-90 min</option>
+                <option value="5">2 hours</option>
+                <option value="6">2-3 hours</option>
+                <option value="7">4 hours or more</option>
+            </select><label for="Qn38"> per day</label></p>
+        <p>39.
+            <label for="Qn39">The instrument I play best (including voice) is ____.</label>
+            <select id="Qn39" name="Qn39" required>
+                <option value="">Select...</option>
+                <option value="NA">NA</option>
+                <option value="voice">voice</option>
+                <option value="piano">piano</option>
+                <option value="guitar">guitar</option>
+                <option value="drums">drums</option>
+                <option value="xylophone">xylophone</option>
+                <option value="flute">flute</option>
+                <option value="oboe">oboe</option>
+                <option value="clarinet">clarinet</option>
+                <option value="bassoon">bassoon</option>
+                <option value="trumpet">trumpet</option>
+                <option value="trombone">trombone</option>
+                <option value="tuba">tuba</option>
+                <option value="saxophone">saxophone</option>
+                <option value="horn">horn</option>
+                <option value="violin">violin</option>
+                <option value="cello">cello</option>
+                <option value="viola">viola</option>
+                <option value="doublebass">double bass</option>
+                <option value="harp">harp</option>
+                <option value="other">other</option>
+            </select></p>
+        <input type="submit" value="Next">
+    </form>
+    <form id="end" class="hidden">
+        <p id="end-text">Thank you once again for participating.<br>
+        Please click submit and let the experimenter know that you have completed the questionnaire.</p>
+        <input type="submit" value="Submit">
+    </form>
+
+   
+
+    <script src="script.js"></script>
+</body>
+</html>
